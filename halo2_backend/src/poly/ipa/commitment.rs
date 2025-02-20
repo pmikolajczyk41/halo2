@@ -230,6 +230,10 @@ impl<C: CurveAffine> ParamsProver<C> for ParamsIPA<C> {
 
         engine.msm(&tmp_scalars, &tmp_bases)
     }
+
+    fn get_g(&self) -> &[C] {
+        &self.g
+    }
 }
 
 #[cfg(test)]
